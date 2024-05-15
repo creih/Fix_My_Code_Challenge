@@ -3,6 +3,7 @@
 this is the square class module
 """
 
+
 class square():
     """this is the class in question"""
     width = 0
