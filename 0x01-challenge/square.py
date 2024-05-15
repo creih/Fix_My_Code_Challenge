@@ -1,30 +1,35 @@
 #!/usr/bin/python3
-""" 
-User class
+"""
+this is the square class module
 """
 
-class User():
-    """ Documentation """
-
-    def __init__(self):
-        """ Documentation """
-        self.__email = None
-
-    @property
-    def email(self):
-        """ Documentation """
-        return self.__email
-
-    @email.setter
-    def email(self, value):
-        """ Documentation """
-        if type(value) is not str:
-            raise TypeError("email must be a string")
-        self.__email = value
+class square():
+    """this is the class in question"""
+    
+    width = 0
+    height = 0
 
     
-if __name__ == "__main__":
+    def __init__(self, *args, **kwargs):
+        """ this is the initialisation of class"""
+        for key, value in kwargs.items():
+            setattr(self, key, value)
 
-    u = User()
-    u.email = "john@snow.com"
-    print(u.email)
+    def area_of_my_square(self):
+        """ Area of the square """
+        return self.width * self.width
+
+    def perimeter_of_my_square(self):
+        """ Perimeter of the square """
+        return 4 * self.width
+
+    def __str__(self):
+        """ this is the returned string for class """
+        return "{}/{}".format(self.width, self.height)
+
+
+if __name__ == "__main__":
+    s = square(width=12, height=9)
+    print(s)
+    print(s.area_of_my_square())
+    print(s.perimeter_of_my_square())
