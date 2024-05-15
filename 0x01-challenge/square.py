@@ -6,13 +6,14 @@ the square class
 
 class square():
     """
-    this is the square class to calculte the perimetr and area    
+    this is the square class to calculte the perimetr area    
     """
     width = 0
     height = 0
 
     
     def __init__(self, *args, **kwargs):
+        """ this is the initialisation function"""
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -21,10 +22,13 @@ class square():
         return self.width * self.width
 
     def PermiterOfMySquare(self):
+        """ this is where the perimeter is calculated"""
         return (self.width + self.height) * 2
 
     def __str__(self):
+        """ tis is what is returned when class called"""
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
