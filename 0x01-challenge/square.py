@@ -1,7 +1,13 @@
 #!/usr/bin/python3
+"""
+this is the module for this class for
+the square class
+"""
 
 class square():
-    
+    """
+    this is the square class to calculte the perimetr and area    
+    """
     width = 0
     height = 0
 
