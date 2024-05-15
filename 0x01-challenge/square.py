@@ -5,11 +5,9 @@ this is the square class module
 
 class square():
     """this is the class in question"""
-    
     width = 0
     height = 0
 
-    
     def __init__(self, *args, **kwargs):
         """ this is the initialisation of class"""
         for key, value in kwargs.items():
@@ -29,6 +27,7 @@ class square():
 
 
 if __name__ == "__main__":
+
     s = square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
